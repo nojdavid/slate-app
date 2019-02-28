@@ -8,6 +8,7 @@ import axios from 'axios';
 const db = DatabaseClient(Orders);
 const api = APIClient(db, Orders);
 
+// Todo put this in process.env
 const paymentsUrl = 'https://us-central1-slate-app-37826.cloudfunctions.net/payments/';
 
 const ordersApi = express().disable('x-powered-by');
@@ -19,7 +20,7 @@ ordersApi.post('/', api.create());
 ordersApi.get('/:id/', api.read());
 ordersApi.get('/:id/cancel/', api.cancel());
 
-// OnCreate Order Trigger 
+// Order OnCreate Trigger 
 const onCreate = functions.database.ref(Orders.id + '/{id}')
   .onCreate((snapshot: any, context) => {
     const order = snapshot.val();
