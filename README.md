@@ -8,7 +8,7 @@
 - GET https://us-central1-slate-app-37826.cloudfunctions.net/orders/orderId/
 		- returns order object from DB
 
-- GET https://us-central1-slate-app-37826.cloudfunctions.net/orders/orderId/cancel/
+- PUT https://us-central1-slate-app-37826.cloudfunctions.net/orders/orderId/cancel/
 		- cancels order
 
 

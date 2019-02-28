@@ -18,7 +18,7 @@ const ordersApi = express().disable('x-powered-by');
  */
 ordersApi.post('/', api.create());
 ordersApi.get('/:id/', api.read());
-ordersApi.get('/:id/cancel/', api.cancel());
+ordersApi.put('/:id/cancel/', api.cancel());
 
 // Order OnCreate Trigger 
 const onCreate = functions.database.ref(Orders.id + '/{id}')
