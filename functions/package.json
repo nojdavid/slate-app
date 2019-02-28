@@ -10,7 +10,7 @@
     "deploy:orders": "firebase deploy --only functions:orders",
     "deploy:payments": "firebase deploy --only functions:payments",
     "logs": "firebase functions:log",
-    "test": "mocha --reporter spec --require babel-core/register"
+    "test": "mocha --reporter spec"
   },
   "main": "lib/index.js",
   "dependencies": {
